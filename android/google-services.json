@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1077496689114",
+    "project_id": "qr-libary-auth",
+    "storage_bucket": "qr-libary-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077496689114:android:38cce922173eab454d50e3",
+        "android_client_info": {
+          "package_name": "com.qr_libary.auh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077496689114-be5146rvtc8r3n3q2fbflmq5nv70396a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7NmKX-2fkukMjLoT8sDHqCR7NHzt7Qsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077496689114-be5146rvtc8r3n3q2fbflmq5nv70396a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
