@@ -1,11 +1,8 @@
-
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_libary/function/create_qr.dart';
 import 'package:qr_libary/function/save_qr.dart';
 import 'package:qr_libary/function/scan_qr.dart';
-import 'package:qr_libary/screen/auth_screen.dart';
 
 void main(List<String> args) {
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
@@ -17,9 +14,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(routes: <String, WidgetBuilder>{
-      '/loginpage': (BuildContext context) => const PhoneAuth()
-    }, home: const Home());
+    return const MaterialApp(routes:  <String, WidgetBuilder>{
+    }, home:  Home());
   }
 }
 
@@ -36,17 +32,24 @@ GlobalKey globalKey = GlobalKey();
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        //get vaule from user
-        children: const [
-          //  PhoneAuth()
-          CreateQr(),
-          SaveQr(),
-          ScanQr(),
-        ],
+    return MaterialApp(
+      theme: ThemeData(
+        useMaterial3: true,
+        primarySwatch: Colors.green,
+      ),
+      home: Scaffold(
+        body: SafeArea(
+          child: Column(
+            //get vaule from user
+            children: const [
+              //  PhoneAuth()
+              CreateQr(),
+              SaveQr(),
+              ScanQr(),
+            ],
+          ),
+        ),
       ),
     );
   }
-  
 }

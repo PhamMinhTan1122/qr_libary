@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 
 class ExternalPath {
   static const MethodChannel _channel = MethodChannel('external_path');
-
   static const String DIRECTORY_MUSIC = "Music";
   static const String DIRECTORY_PODCASTS = "Podcasts";
   static const String DIRECTORY_RINGTONES = "Ringtones";

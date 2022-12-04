@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-class HomeScreen extends StatelessWidget {
-  final User user;
-  const HomeScreen({super.key, required this.user});
+import 'package:qr_libary/common/TextFormFile.dart';
+TextEditingController _description_controller = TextEditingController();
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: const EdgeInsets.all(32),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'You are logged in succesfully',
-              style: TextStyle(color: Colors.lightBlue, fontSize: 32),
-            ),
-            Text('${user.phoneNumber}',style: const TextStyle(color: Colors.grey),)
-          ],
-        ));
-  }
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          const SizedBox(height: 15),
+          TextFormFile_Widget(HintText: 'Desciption Book', TextLable: 'Enter Desciption Book', controller: _description_controller),
+        ],
+      ),
+    );
+}
 }
